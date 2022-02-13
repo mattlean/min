@@ -1,9 +1,11 @@
-import MenuIcon from '@mui/icons-material/Menu'
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
+import { useState } from 'react'
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
 import logo from './assets/logo.png'
 import CTA from './CTA'
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
     <header className="header-container">
       <nav>
@@ -13,7 +15,21 @@ function Header() {
         <div>Our Story</div>
         <div>Locations</div>
         <div>Menu</div>
-        <div>Services</div>
+        <div
+          style={{ position: 'relative' }}
+          onMouseOver={() => {
+            console.log('yo')
+            setIsOpen(true)
+          }}
+        >
+          Services{' '}
+          <ArrowDropDownIcon style={{ transform: 'translateY(5px)' }} />
+          <div className="dropdown" style={{ opacity: isOpen ? '100%' : '0%' }}>
+            <div>Tea Ceremonies</div>
+            <div>Brewing Class</div>
+            <div>Meet & Greet</div>
+          </div>
+        </div>
         <div />
       </nav>
       <div />

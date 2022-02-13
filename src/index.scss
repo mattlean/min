@@ -35,6 +35,27 @@ body {
 
     > div {
       cursor: pointer;
+
+      > .dropdown {
+        margin-top: 1em;
+        position: absolute;
+        transform: translate(-17px, 0);
+        z-index: 999;
+        transition: opacity 400ms ease-out;
+        width: 180px;
+        box-shadow: 0 12px 12px rgba(0, 0, 0, 0.25);
+
+        > div {
+          padding: 1em;
+          background-color: var(--white);
+          transition: all 200ms ease-out;
+
+          &:hover {
+            background-color: var(--black);
+            color: var(--white);
+          }
+        }
+      }
     }
   }
 }
@@ -88,7 +109,7 @@ body {
     animation-play-state: running;
 
     > span {
-      padding: 0 2vw;
+      padding: 0 4vw;
       white-space: nowrap;
     }
   }
@@ -106,6 +127,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
+  transition: all 200ms ease-out;
 
   &:hover {
     background-color: var(--black);
