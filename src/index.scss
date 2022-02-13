@@ -45,7 +45,7 @@ body {
   > nav {
     display: flex;
     width: 50%;
-    align-items: end;
+    align-items: flex-end;
     justify-content: space-between;
     font-weight: 200;
     letter-spacing: 1px;
@@ -103,7 +103,9 @@ body {
 .marquee {
   color: var(--white);
   font-size: 10vw;
-  font-weight: 700;
+  font-family: roc-grotesk, sans-serif;
+  font-weight: 500;
+  font-style: normal;
   text-transform: uppercase;
   letter-spacing: 2px;
 
@@ -114,7 +116,7 @@ body {
   --move-final: calc(-50% + var(--offset));
 
   position: absolute;
-  top: 461px;
+  top: 483px;
   mix-blend-mode: exclusion;
 
   > .marquee-content {
