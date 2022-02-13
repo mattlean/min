@@ -1,0 +1,111 @@
+@use '~normalize.css/normalize';
+
+:root {
+  --white: #f7f3f0;
+  --black: #0d0900;
+  --container-width: 1440px;
+}
+
+body {
+  background: var(--white);
+  color: var(--black);
+  font-family: neue-haas-unica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  overflow: hidden;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 32px auto;
+  width: var(--container-width);
+}
+
+.logo {
+  width: 60px;
+}
+
+.landing-video-area {
+  width: 100%;
+  height: 800px;
+  margin-top: 32px;
+  overflow: hidden;
+  position: relative;
+
+  > .vid-container {
+    margin: 0 auto;
+    width: var(--container-width);
+
+    > .vid {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.marquee {
+  color: var(--white);
+  font-size: 12vw;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  position: relative;
+  overflow: hidden;
+  --offset: 20vw;
+  --move-initial: calc(-25% + var(--offset));
+  --move-final: calc(-50% + var(--offset));
+
+  position: absolute;
+  top: 270px;
+  mix-blend-mode: exclusion;
+
+  > .marquee-content {
+    width: fit-content;
+    display: flex;
+    position: relative;
+    transform: translate3d(var(--move-initial), 0, 0);
+    animation: marquee 10s linear infinite;
+    animation-play-state: running;
+
+    > span {
+      padding: 0 2vw;
+      white-space: nowrap;
+    }
+  }
+}
+
+.cta-container {
+  margin: 32px auto;
+  width: var(--container-width);
+  display: flex;
+
+  > button {
+    background-color: var(--black);
+    border: 4px solid var(--white);
+    color: var(--white);
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 auto;
+    padding: 0.5em 1.25em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    &:hover {
+      background-color: var(--white);
+      color: var(--black);
+      border: 4px solid var(--black);
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(var(--move-initial), 0, 0);
+  }
+
+  100% {
+    transform: translate3d(var(--move-final), 0, 0);
+  }
+}
