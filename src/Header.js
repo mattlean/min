@@ -24,7 +24,7 @@ function Header() {
           <div className="dropdown" style={{ opacity: isOpen ? '100%' : '0%' }}>
             <div>Tea Ceremonies</div>
             <div>Brewing Class</div>
-            <div>Meet & Greet</div>
+            <div onMouseOut={() => setIsOpen(false)}>Meet & Greet</div>
           </div>
         </div>
         <div />

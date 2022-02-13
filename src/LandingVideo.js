@@ -4,7 +4,7 @@ function LandingVideo() {
   return (
     <div className="landing-video-area">
       <div className="vid-container">
-        <video autoPlay controls loop muted preLoad className="vid">
+        <video autoPlay loop muted preLoad className="vid">
           <source src={teaVideo} type="video/mp4" />
         </video>
       </div>
