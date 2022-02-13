@@ -12,6 +12,15 @@ function SocialMedia() {
         alt="Twitter"
         style={{ transform: 'translateY(-2px)' }}
       />
+      <span
+        style={{
+          marginLeft: '1.2em',
+          opacity: '60%',
+          transform: 'translateY(-3px)',
+        }}
+      >
+        闽茶铺
+      </span>
     </div>
   )
 }

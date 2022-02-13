@@ -17,10 +17,7 @@ function Header() {
         <div>Menu</div>
         <div
           style={{ position: 'relative' }}
-          onMouseOver={() => {
-            console.log('yo')
-            setIsOpen(true)
-          }}
+          onMouseOver={() => setIsOpen(true)}
         >
           Services{' '}
           <ArrowDropDownIcon style={{ transform: 'translateY(5px)' }} />

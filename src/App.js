@@ -8,6 +8,7 @@ function App() {
       <Header />
       <LandingVideo />
       <SocialMedia />
+      <div className="chinese taste-tea">品茶</div>
     </>
   )
 }

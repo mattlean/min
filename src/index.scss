@@ -6,6 +6,23 @@
   --container-width: 1440px;
 }
 
+.chinese {
+  font-family: source-han-sans-simplified-c, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.taste-tea {
+  position: absolute;
+  top: 516px;
+  right: 33px;
+  font-size: 259px;
+  font-weight: 900;
+  z-index: -999;
+  color: #e3e1de;
+  writing-mode: vertical-rl;
+}
+
 body {
   background: var(--white);
   color: var(--black);
@@ -85,7 +102,7 @@ body {
 
 .marquee {
   color: var(--white);
-  font-size: 12vw;
+  font-size: 10vw;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -97,7 +114,7 @@ body {
   --move-final: calc(-50% + var(--offset));
 
   position: absolute;
-  top: 450px;
+  top: 461px;
   mix-blend-mode: exclusion;
 
   > .marquee-content {
@@ -106,10 +123,15 @@ body {
     position: relative;
     transform: translate3d(var(--move-initial), 0, 0);
     animation: marquee 10s linear infinite;
-    animation-play-state: running;
+    animation-play-state: playing;
+    opacity: 100%;
+
+    &:hover {
+      animation-play-state: paused;
+    }
 
     > span {
-      padding: 0 4vw;
+      padding: 0 2vw;
       white-space: nowrap;
     }
   }
@@ -145,7 +167,7 @@ body {
   > img {
     width: 24px;
     opacity: 60%;
-    margin-left: 0.66em;
+    margin-left: 1.33em;
   }
 }
 
