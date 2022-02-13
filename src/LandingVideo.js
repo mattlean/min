@@ -1,19 +1,19 @@
-import teaFarmers from './assets/tea-farmers.mp4'
+import teaVideo from './assets/tea-video.mp4'
 
 function LandingVideo() {
   return (
     <div className="landing-video-area">
       <div className="vid-container">
         <video autoPlay controls loop muted preLoad className="vid">
-          <source src={teaFarmers} type="video/mp4" />
+          <source src={teaVideo} type="video/mp4" />
         </video>
       </div>
       <div className="marquee">
         <div className="marquee-content">
-          <span>Experience tea culture</span>
-          <span>Experience tea culture</span>
-          <span>Experience tea culture</span>
-          <span>Experience tea culture</span>
+          <span>Enjoy Tea Culture</span>
+          <span>Enjoy Tea Culture</span>
+          <span>Enjoy Tea Culture</span>
+          <span>Enjoy Tea Culture</span>
         </div>
       </div>
     </div>
