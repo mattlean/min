@@ -1,4 +1,4 @@
-import teaVideo from './assets/tea-video.mp4'
+import teaVideo from './assets/vertical.mp4'
 
 function LandingVideo() {
   return (

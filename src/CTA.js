@@ -1,7 +1,7 @@
 function CTA() {
   return (
     <button type="button" className="cta">
-      Order Now
+      Shop
     </button>
   )
 }

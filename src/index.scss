@@ -3,7 +3,7 @@
 :root {
   --white: #f7f3f0;
   --black: #0d0900;
-  --container-width: 1440px;
+  --container-width: 100%;
 }
 
 .chinese {
@@ -31,16 +31,22 @@ body {
   font-style: normal;
   overflow: hidden;
   text-rendering: optimizeLegibility;
+  box-sizing: border-box;
 }
 
 .header-container {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
-  margin: 20px auto 32px;
+  margin: 20px 0 32px;
   text-transform: uppercase;
   letter-spacing: 1px;
   width: var(--container-width);
+
+  // responsive nav
+  > div {
+    width: 200px;
+  }
 
   > nav {
     display: flex;
@@ -83,7 +89,7 @@ body {
 
 .landing-video-area {
   width: 100%;
-  height: 800px;
+  height: 982px;
   margin-top: 32px;
   overflow: hidden;
   position: relative;
@@ -96,13 +102,15 @@ body {
       width: 100%;
       height: 100%;
       object-fit: cover;
+
+      transform: translateY(-313px);
     }
   }
 }
 
 .marquee {
   color: var(--white);
-  font-size: 10vw;
+  font-size: 20vw;
   font-family: roc-grotesk, sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -117,7 +125,7 @@ body {
   --move-final: calc(-50% + var(--offset));
 
   position: absolute;
-  top: 513px;
+  top: 394px;
   mix-blend-mode: exclusion;
 
   > .marquee-content {
@@ -134,7 +142,7 @@ body {
     }
 
     > span {
-      padding: 0 2vw;
+      padding: 0 4vw;
       white-space: nowrap;
     }
   }
@@ -143,11 +151,9 @@ body {
 .cta {
   background-color: var(--white);
   border: 3px solid var(--black);
-  box-sizing: border-box;
   color: var(--black);
   font-size: 18px;
   font-weight: 700;
-  margin: 0 auto;
   padding: 0.5em 1em;
   text-transform: uppercase;
   letter-spacing: 2px;

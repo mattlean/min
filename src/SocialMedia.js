@@ -17,6 +17,7 @@ function SocialMedia() {
           marginLeft: '1.2em',
           opacity: '60%',
           transform: 'translateY(-3px)',
+          marginRight: 20
         }}
       >
         闽茶铺
