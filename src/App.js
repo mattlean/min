@@ -1,14 +1,13 @@
 import Header from './Header'
-// import IntroParagraph from './IntroParagraph'
 import LandingVideo from './LandingVideo'
-import CTA from './CTA'
+import SocialMedia from './SocialMedia'
 
 function App() {
   return (
     <>
       <Header />
       <LandingVideo />
-      <CTA />
+      <SocialMedia />
     </>
   )
 }
