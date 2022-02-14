@@ -9,15 +9,8 @@ function Header() {
 
   return (
     <header className="header-container">
-      <div>
-        <MenuIcon style={{fontSize: 65, transform: 'translateX(-8px)', marginLeft: 20}} />
-      </div>
-      <div style={{display: 'flex', justifyContent: 'center'}}>
-        <img src={logo} alt="Min Logo" className="logo" />
-      </div>
-      <div style={{display: 'flex', justifyContent: 'flex-end', marginRight: 20}}>
-        <CTA />
-      </div>
+      <img src={logo} alt="Min Logo" className="logo" style={{marginLeft: 20}} />
+      <MenuIcon fontSize="large" style={{transform: 'translate(4px, -9px)', marginRight: 20}} />
     </header>
   )
 }

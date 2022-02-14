@@ -1,8 +1,10 @@
 function CTA() {
   return (
-    <button type="button" className="cta">
-      Shop
-    </button>
+    <div className="cta-container">
+      <button type="button" className="cta">
+        Order Now
+      </button>
+    </div>
   )
 }
 

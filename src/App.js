@@ -1,4 +1,5 @@
 import Header from './Header'
+import CTA from './CTA'
 import LandingVideo from './LandingVideo'
 import SocialMedia from './SocialMedia'
 
@@ -7,8 +8,8 @@ function App() {
     <>
       <Header />
       <LandingVideo />
+      <CTA />
       <SocialMedia />
-      <div className="chinese taste-tea">品茶</div>
     </>
   )
 }
